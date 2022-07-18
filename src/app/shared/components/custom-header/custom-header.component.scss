@@ -1,0 +1,20 @@
+@import "/src/app/shared/styles/global-colors.scss";
+@import "/src/app/shared/styles/numeric-variables.scss";
+
+header {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: $header_height;
+  width: 100%;
+  background: $header_strong_blue;
+  margin-bottom: $header_bottom_offset;
+
+  h1{
+    margin-left: 15px;
+    color: white;
+    cursor: pointer;
+  }
+}

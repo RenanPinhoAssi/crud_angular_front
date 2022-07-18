@@ -1,0 +1,32 @@
+@import "/src/app/shared/styles/global-colors.scss";
+
+.icon-title-router {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 200px;
+  border: 2px solid $border_strong_gray;
+  border-radius: 5px;
+  color: $text_medium_gray;
+  cursor: pointer;
+  margin: 0px 15px;
+
+  &:hover {
+    color: $text_strong_blue;
+    border-color: $border_strong_blue;
+  }
+
+  i {
+    font-size: 5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  h5 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
