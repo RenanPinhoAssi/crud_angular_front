@@ -1,0 +1,64 @@
+@import "/src/app/shared/styles/global-colors.scss";
+
+h5 {
+  color: $text_medium_blue;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control-lg {
+  margin-bottom: 0 !important;
+}
+
+.input-group-text {
+  height: 100%;
+}
+
+.warning-text {
+  color: $text_medium_gray;
+}
+
+.button-custom-color {
+  padding: 8px 45px;
+  font-size: 1.5rem;
+  background-color: $button_light_green;
+  border-color: $button_light_green;
+
+  &:hover {
+    transition: all 500ms;
+
+    &:hover {
+      background-color: white;
+      color: $text_strong_blue;
+    }
+  }
+}
+
+.error-message {
+  font-style: italic;
+  color: red;
+}
+
+input {
+  text-transform: uppercase;
+
+  &.lowercase {
+    text-transform: lowercase;
+  }
+}
+
+::-webkit-input-placeholder {
+  text-transform: none;
+}
+:-moz-placeholder {
+  text-transform: none;
+}
+::-moz-placeholder {
+  text-transform: none;
+}
+:-ms-input-placeholder {
+  text-transform: none;
+}
+::placeholder {
+  text-transform: none;
+}

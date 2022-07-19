@@ -1,13 +1,14 @@
 @import "/src/app/shared/styles/numeric-variables.scss";
 
-.container {
+.special-container {
   display: flex;
+  flex-flow: wrap;
   min-height: calc(100vh - ($header_height + $header_bottom_offset));
 
   .button-holder {
     display: flex;
     width: 100%;
-    align-self: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }

@@ -1,0 +1,57 @@
+@import "/src/app/shared/styles/global-colors.scss";
+
+.search-holder {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+
+  .filter-box {
+    padding: 8px;
+    height: 60px;
+    width: 30%;
+    min-width: 200px;
+    border: 1px solid $border_light_gray;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
+
+  .btn-search {
+    display: flex;
+    background-color: $button_light_green;
+    border-color: $button_light_green;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $button_strong_green;
+      border-color: $button_strong_green;
+    }
+  }
+}
+
+.btn-custom {
+  font-size: 1.5rem;
+  padding: 0 8px;
+  margin: 0 5px;
+  transition: all 500ms;
+  width: 30px;
+  height: 30px;
+
+  &--blue {
+    background-color: $button_light_blue;
+    border-color: $button_light_blue;
+  }
+
+  &--dark-blue {
+    background-color: $button_strong_blue;
+    border-color: $button_strong_blue;
+  }
+
+  &:hover {
+    background-color: white;
+    color: $text_strong_blue;
+  }
+}

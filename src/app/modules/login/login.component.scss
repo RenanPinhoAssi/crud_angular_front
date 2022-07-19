@@ -1,0 +1,37 @@
+@import "/src/app/shared/styles/global-colors.scss";
+
+.login-box {
+  position: fixed;
+  display: flex;
+  background: $background_extra_strong_blue;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+
+  .fake-input-box {
+    background: white;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    padding: 15px;
+  }
+
+  .button-custom-color {
+    padding: 8px 45px;
+    font-size: 1.5rem;
+    background-color: $button_light_green;
+    border-color: $button_light_green;
+
+    &:hover {
+      transition: all 500ms;
+
+      &:hover {
+        background-color: white;
+        color: $text_strong_blue;
+      }
+    }
+  }
+}

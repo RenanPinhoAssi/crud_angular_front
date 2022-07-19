@@ -1,8 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 
 /* Importing Bootstrap SCSS file. */
+@import "/src/app/shared/styles/global-colors.scss";
 @import "~bootstrap/scss/bootstrap";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-html {
+@import "~@swimlane/ngx-datatable/index.css";
+@import "~@swimlane/ngx-datatable/themes/bootstrap.css";
+@import "~@swimlane/ngx-datatable/assets/icons.css";
+
+html,
+body {
   font-size: 12px;
+  font-family: "Montserrat" !important;
+}
+
+.ngx-datatable {
+  font-size: 1.2rem;
+
+  .datatable-header {
+    color: $text_light_blue;
+    font-weight: bold;
+  }
+
+  datatable-body-cell {
+    display: flex !important;
+    align-items: center;
+  }
+
+  datatable-row-wrapper {
+    font-weight: bold;
+    color: $text_strong_blue;
+    background-color: $background_light_gray;
+    margin: 5px 0px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .pager {
+    font-size: 1.5rem;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a {
+        margin: 0px 8px;
+        text-decoration: none;
+        color: $text_strong_blue;
+      }
+
+      &.disabled {
+        a {
+          color: $text_light_gray;
+          opacity: 0.3;
+        }
+      }
+
+      &.active {
+        a {
+          color: $text_light_blue;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .datatable-footer {
+    .page-count {
+      display: none;
+    }
+
+    .datatable-pager {
+      text-align: center !important;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: $background_strong_blue !important;
 }

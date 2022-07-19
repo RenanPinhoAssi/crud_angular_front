@@ -1,0 +1,19 @@
+@import "/src/app/shared/styles/global-colors.scss";
+
+.screen-title-box {
+  margin-bottom: 30px;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  .return-button {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $text_strong_blue;
+      transition: all 300ms;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<app-screen-title title="LISTA DE CLIENTES"></app-screen-title>
+
+<h5>Filtro:</h5>
+<div class="search-holder">
+  <input class="filter-box" type="text" placeholder="" #search_word (keyup)="_handle_enter($event, search_word.value)"
+    (blur)="_update_filter(search_word.value)" />
+  <div class="btn btn-primary btn-search" (click)="_update_filter(search_word.value)"><i class="fa fa-search"></i></div>
+</div>
+
+<ngx-datatable #table class="material" [columnMode]="'force'" [headerHeight]="30" [footerHeight]="50" rowHeight="auto"
+  [limit]="4" [rows]="rows">
+  <ngx-datatable-column name="Nome" prop="nome"></ngx-datatable-column>
+  <ngx-datatable-column name="CPF" prop="cpf">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      {{value | cpf}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Data de Nascimento" prop="data-nascimento">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      {{value | date:'dd/MM/YYYY'}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Data Cadastro" prop="data-cadastro">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      {{value | date:'dd/MM/YYYY'}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Renda Mensal" prop="renda-mensal">
+    <ng-template let-value="value" ngx-datatable-cell-template>
+      {{value | currency: 'BRL'}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Ações" prop="id">
+    <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
+      <div class="text-left">
+        <div class="btn btn-primary btn-custom btn-custom--blue" (click)="_edit_customer(row)"><i class="fa fa-pencil"></i></div>
+        <div class="btn btn-primary btn-custom btn-custom--dark-blue" (click)="_delete_customer(row)"><i
+            class="fa fa-trash-o"></i></div>
+      </div>
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>

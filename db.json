@@ -1,0 +1,49 @@
+{
+  "customers": [
+    {
+      "id": "1658185951282",
+      "nome": "Ana Paula Pereira",
+      "cpf": "440.990.400-03",
+      "data-nascimento": "1988-05-20",
+      "data-cadastro": "2022-05-02",
+      "e-mail": "anapaula@gmail.com",
+      "renda-mensal": 2000
+    },
+    {
+      "id": "1658185958265",
+      "nome": "Carlos Soares",
+      "cpf": "877.708.200-14",
+      "data-nascimento": "1988-05-01",
+      "data-cadastro": "2022-07-02",
+      "e-mail": "calossoares@hotmail.com",
+      "renda-mensal": 3000
+    },
+    {
+      "id": "1658185963576",
+      "nome": "Daniel Santos",
+      "cpf": "557.806.830-85",
+      "data-nascimento": "1978-06-23",
+      "data-cadastro": "2021-02-18",
+      "e-mail": "danielsantos@yahoo.com",
+      "renda-mensal": 7000
+    },
+    {
+      "id": "1658185968800",
+      "nome": "Edilene Souza",
+      "cpf": "931.168.980-73",
+      "data-nascimento": "2000-01-01",
+      "data-cadastro": "2022-01-02",
+      "e-mail": "edilenesouza@outlook.com",
+      "renda-mensal": 4000
+    },
+    {
+      "id": "Nm8DOUS",
+      "nome": "Renan Pinho Assi",
+      "cpf": "093.425.469-94",
+      "data-nascimento": "1993-10-13",
+      "data-cadastro": "2022-07-19",
+      "e-mail": "dddd@aaaaa.com",
+      "renda-mensal": 500
+    }
+  ]
+}

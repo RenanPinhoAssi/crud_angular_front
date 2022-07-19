@@ -1,0 +1,71 @@
+<div class="row my-2">
+  <div class="col-md-6">
+    <h5>Nome*:</h5>
+    <input type="text" id="defaultContactFormName" class="form-control form-control-lg mb-4"
+      placeholder="Informe o Nome" [ngModel]="_customer['nome']" (ngModelChange)="_customer['nome']=$event"
+      (blur)="_handle_blur_nome_input()">
+    <p class="error-message mt-2 mb-0" [style]="{'opacity': (!nome_invalid || _customer['nome'].length == 0) ? 0 : 1}">É
+      preciso pelo menos 1 sobrenome</p>
+  </div>
+
+  <div class="col-md-3">
+    <h5>CPF*:</h5>
+    <input type="text" id="defaultContactFormName" class="form-control form-control-lg mb-4" placeholder="Insira o CPF"
+      [ngModel]="_customer['cpf'] | cpf" (ngModelChange)="_customer['cpf']=$event" (blur)="_handle_blur_cpf_input()"
+      [disabled]="disable_cpf ? 'disabled' : false" maxlength="14">
+    <p class="error-message mt-2 mb-0" [style]="{'opacity': (!cpf_invalid || _customer['cpf'].length == 0) ? 0 : 1}">CPF
+      inválido</p>
+  </div>
+  <div class="col-md-3">
+    <h5>Data de Nascimento*:</h5>
+    <input type="date" id="defaultContactFormName" class="form-control form-control-lg mb-4"
+      [ngModel]="_customer['data-nascimento']" (ngModelChange)="_customer['data-nascimento']=$event"
+      (blur)="_handle_blur_nascimento_input()">
+    <p class="error-message mt-2 mb-0"
+      [style]="{'opacity': (!data_nascimento_invalid || _customer['data-nascimento'].length == 0) ? 0 : 1}">Deve ter
+      mais
+      de 18 anos e menos de 60</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <h5>Renda Mensal*:</h5>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="validationTooltipUsernamePrepend">R$</span>
+      </div>
+      <input type="number" min="0" step="500.0" id="defaultContactFormName" class="form-control form-control-lg mb-4"
+        placeholder="0.00" [ngModel]="_customer['renda-mensal']" (ngModelChange)="_refresh_renda($event)"
+        (blur)="_handle_blur_renda_input()">
+    </div>
+    <p class="error-message mt-2 mb-0"
+      [style]="{'opacity': (!renda_invalid || _customer['renda-mensal'] == 0) ? 0 : 1}">
+      A renda não pode ser negativa</p>
+  </div>
+
+  <div class="col-md-9">
+    <h5>E-mail*:</h5>
+    <input type="text" id="defaultContactFormName" class="form-control form-control-lg mb-4 lowercase"
+      placeholder="Informe o e-mail" [ngModel]="_customer['e-mail']" (ngModelChange)="_customer['e-mail']=$event"
+      (blur)="_handle_blur_email_input()">
+    <p class=" error-message mt-2 mb-0"
+      [style]="{'opacity': (!email_invalid || _customer['e-mail']?.length == 0) ? 0 : 1}">
+      E-mail inválido
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <p class="warning-text mt-5">*Campos com preenchimento obrigatório</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <button class="btn btn-primary button-custom-color"
+      [disabled]="cpf_invalid || nome_invalid || data_nascimento_invalid || renda_invalid || email_invalid ? 'disabled' : null"
+      (click)="_handle_save_button()">Salvar</button>
+  </div>
+</div>
