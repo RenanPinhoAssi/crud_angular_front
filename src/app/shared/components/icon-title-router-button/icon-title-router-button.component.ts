@@ -16,6 +16,6 @@ export class IconTitleRouterButtonComponent implements OnInit {
   ngOnInit(): void {}
 
   _change_route() {
-    this.router.navigate([`/customers/${this.route}`]);
+    this.router.navigate([`${this.route}`]);
   }
 }

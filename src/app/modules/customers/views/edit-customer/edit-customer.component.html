@@ -1,5 +1,6 @@
-<app-screen-title title="EDIÇÃO DE CLIENTES"></app-screen-title>
-<app-customer-form [customer]="_customer" (perform_save_action)="_register_customer($event)" [disable_cpf]="true"></app-customer-form>
+<app-screen-title title="EDIÇÃO DE CLIENTES" route="/customers/list"></app-screen-title>
+<app-customer-form [customer]="_customer" (perform_save_action)="_register_customer($event)" [disable_cpf]="true">
+</app-customer-form>
 
 <ng-template [ngIf]="_loading">
   <app-preloader-spinner></app-preloader-spinner>
